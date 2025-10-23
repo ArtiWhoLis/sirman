@@ -1,4 +1,9 @@
-from src.models.book import book
+from src.models.book import Book
+                     
+book = Book("Гарри Поттер и философский камень","Дж. К. Роулинг","1997")
+print(book)
 
-book1 = book("Название", "Автор", 1990, 301, "978-985-577-957-6")
-print(book1)
+from src.models.user import User
+
+user = User("Сухих Антон", "142", "artiwho@mail.ru")
+print(user)
