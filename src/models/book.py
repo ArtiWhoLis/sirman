@@ -1,4 +1,3 @@
-import src.utils.logger
 import logging
 
 

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module book</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">book</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:d%3A%5C142%5Csirman%5Csrc%5Cmodels%5Cbook.py">d:\142\sirman\src\models\book.py</a></td></tr></table>
+    <p></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="logging.html">logging</a><br>
+</td><td class="multicolumn"></td><td class="multicolumn"></td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor index-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Classes</strong></td></tr>
+    
+<tr><td class="decor index-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl>
+<dt class="heading-text"><a href="builtins.html#object">builtins.object</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="book.html#Book">Book</a>
+</dt><dd>
+<dl>
+<dt class="heading-text"><a href="book.html#EBook">EBook</a>
+</dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="Book">class <strong>Book</strong></a>(<a href="builtins.html#object">builtins.object</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#Book">Book</a>(title:&nbsp;str,&nbsp;author:&nbsp;str,&nbsp;year:&nbsp;int,&nbsp;isbn:&nbsp;str)<br>
+&nbsp;<br>
+Класс,&nbsp;представляющий&nbsp;книгу&nbsp;в&nbsp;библиотечной&nbsp;системе.<br>
+&nbsp;<br>
+Класс&nbsp;отвечает&nbsp;за&nbsp;хранение&nbsp;информации&nbsp;о&nbsp;книге&nbsp;и&nbsp;управление&nbsp;её&nbsp;состоянием&nbsp;—&nbsp;доступна&nbsp;ли&nbsp;она&nbsp;для&nbsp;выдачи.<br>
+При&nbsp;создании&nbsp;экземпляра&nbsp;настраивает&nbsp;базовую&nbsp;систему&nbsp;логирования,&nbsp;позволяющую&nbsp;отслеживать&nbsp;действия&nbsp;с&nbsp;книгами.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;Название&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;(str):&nbsp;Автор&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;(int):&nbsp;Год&nbsp;издания&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isbn&nbsp;(str):&nbsp;Международный&nbsp;стандартный&nbsp;книжный&nbsp;номер.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;is_available&nbsp;(bool):&nbsp;Флаг&nbsp;доступности&nbsp;книги&nbsp;для&nbsp;выдачи.<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn">Methods defined here:<br>
+<dl><dt><a name="Book-__init__"><strong>__init__</strong></a>(self, title: str, author: str, year: int, isbn: str)</dt><dd><span class="code">Инициализирует&nbsp;экземпляр&nbsp;книги&nbsp;и&nbsp;настраивает&nbsp;логирование.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;Название&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;(str):&nbsp;Автор&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;(int):&nbsp;Год&nbsp;издания&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isbn&nbsp;(str):&nbsp;ISBN&nbsp;книги.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ValueError:&nbsp;Если&nbsp;год&nbsp;издания&nbsp;некорректен&nbsp;(например,&nbsp;в&nbsp;будущем).</span></dd></dl>
+
+<dl><dt><a name="Book-borrow"><strong>borrow</strong></a>(self) -&gt; str</dt><dd><span class="code">Пример<br>
+&gt;&gt;&gt;&nbsp;book&nbsp;=&nbsp;<a href="#Book">Book</a>("Книга",&nbsp;"Автор",&nbsp;"Год&nbsp;издания")<br>
+&gt;&gt;&gt;&nbsp;book.<a href="#Book-borrow">borrow</a>()<br>
+Книга&nbsp;выдана<br>
+&nbsp;<br>
+Выдаёт&nbsp;книгу&nbsp;пользователю,&nbsp;если&nbsp;она&nbsp;доступна.<br>
+&nbsp;<br>
+Изменяет&nbsp;состояние&nbsp;книги&nbsp;—&nbsp;делает&nbsp;её&nbsp;недоступной&nbsp;для&nbsp;повторной&nbsp;выдачи&nbsp;до&nbsp;возврата.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Сообщение&nbsp;о&nbsp;результате&nbsp;операции&nbsp;(успешная&nbsp;выдача&nbsp;или&nbsp;невозможность&nbsp;выдать&nbsp;книгу).</span></dd></dl>
+
+<dl><dt><a name="Book-get_info"><strong>get_info</strong></a>(self) -&gt; str</dt><dd><span class="code">Возвращает&nbsp;краткую&nbsp;информацию&nbsp;о&nbsp;книге.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Строка&nbsp;с&nbsp;названием,&nbsp;автором&nbsp;и&nbsp;годом&nbsp;издания&nbsp;книги.</span></dd></dl>
+
+<dl><dt><a name="Book-return_book"><strong>return_book</strong></a>(self) -&gt; str</dt><dd><span class="code">Принимает&nbsp;возвращённую&nbsp;книгу&nbsp;и&nbsp;делает&nbsp;её&nbsp;снова&nbsp;доступной.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Сообщение&nbsp;о&nbsp;результате&nbsp;возврата&nbsp;книги.</span></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table> <p>
+<table class="section">
+<tr class="decor title-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><a name="EBook">class <strong>EBook</strong></a>(<a href="book.html#Book">Book</a>)</td></tr>
+    
+<tr><td class="decor title-decor" rowspan=2><span class="code">&nbsp;&nbsp;&nbsp;</span></td>
+<td class="decor title-decor" colspan=2><span class="code"><a href="#EBook">EBook</a>(title:&nbsp;str,&nbsp;author:&nbsp;str,&nbsp;year:&nbsp;int,&nbsp;format:&nbsp;str,&nbsp;isbn:&nbsp;str)<br>
+&nbsp;<br>
+Класс,&nbsp;представляющий&nbsp;электронную&nbsp;книгу.<br>
+&nbsp;<br>
+Наследуется&nbsp;от&nbsp;базового&nbsp;класса&nbsp;<a href="#Book">Book</a>&nbsp;и&nbsp;добавляет&nbsp;атрибут&nbsp;формата&nbsp;файла.<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;Название&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;(str):&nbsp;Автор&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;(int):&nbsp;Год&nbsp;издания&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isbn&nbsp;(str):&nbsp;ISBN&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;format&nbsp;(str):&nbsp;Формат&nbsp;электронного&nbsp;файла&nbsp;(например,&nbsp;'pdf',&nbsp;'epub').<br>&nbsp;</span></td></tr>
+<tr><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt>Method resolution order:</dt>
+<dd><a href="book.html#EBook">EBook</a></dd>
+<dd><a href="book.html#Book">Book</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="EBook-__init__"><strong>__init__</strong></a>(self, title: str, author: str, year: int, format: str, isbn: str)</dt><dd><span class="code">Инициализирует&nbsp;экземпляр&nbsp;электронной&nbsp;книги.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;(str):&nbsp;Название&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;author&nbsp;(str):&nbsp;Автор&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;year&nbsp;(int):&nbsp;Год&nbsp;издания&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;format&nbsp;(str):&nbsp;Формат&nbsp;файла&nbsp;электронной&nbsp;книги.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;isbn&nbsp;(str):&nbsp;ISBN&nbsp;книги.</span></dd></dl>
+
+<dl><dt><a name="EBook-get_info"><strong>get_info</strong></a>(self) -&gt; str</dt><dd><span class="code">Возвращает&nbsp;информацию&nbsp;об&nbsp;электронной&nbsp;книге,&nbsp;включая&nbsp;формат&nbsp;файла.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Строка&nbsp;с&nbsp;названием,&nbsp;автором,&nbsp;годом&nbsp;издания&nbsp;и&nbsp;форматом&nbsp;файла.</span></dd></dl>
+
+<hr>
+Methods inherited from <a href="book.html#Book">Book</a>:<br>
+<dl><dt><a name="EBook-borrow"><strong>borrow</strong></a>(self) -&gt; str</dt><dd><span class="code">Пример<br>
+&gt;&gt;&gt;&nbsp;book&nbsp;=&nbsp;<a href="#Book">Book</a>("Книга",&nbsp;"Автор",&nbsp;"Год&nbsp;издания")<br>
+&gt;&gt;&gt;&nbsp;book.<a href="#EBook-borrow">borrow</a>()<br>
+Книга&nbsp;выдана<br>
+&nbsp;<br>
+Выдаёт&nbsp;книгу&nbsp;пользователю,&nbsp;если&nbsp;она&nbsp;доступна.<br>
+&nbsp;<br>
+Изменяет&nbsp;состояние&nbsp;книги&nbsp;—&nbsp;делает&nbsp;её&nbsp;недоступной&nbsp;для&nbsp;повторной&nbsp;выдачи&nbsp;до&nbsp;возврата.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Сообщение&nbsp;о&nbsp;результате&nbsp;операции&nbsp;(успешная&nbsp;выдача&nbsp;или&nbsp;невозможность&nbsp;выдать&nbsp;книгу).</span></dd></dl>
+
+<dl><dt><a name="EBook-return_book"><strong>return_book</strong></a>(self) -&gt; str</dt><dd><span class="code">Принимает&nbsp;возвращённую&nbsp;книгу&nbsp;и&nbsp;делает&nbsp;её&nbsp;снова&nbsp;доступной.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;Сообщение&nbsp;о&nbsp;результате&nbsp;возврата&nbsp;книги.</span></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="book.html#Book">Book</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><span class="code">dictionary&nbsp;for&nbsp;instance&nbsp;variables</span></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><span class="code">list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object</span></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
