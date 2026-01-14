@@ -11,7 +11,7 @@ load_dotenv(env_path)
 
 class Config:
     LOG_FILE_PATH = os.getenv('LOG_FILE_PATH', '1.log')
-
+    DP_PATH = os.getenv('')
 config = Config()
 
 print(config.LOG_FILE_PATH)
