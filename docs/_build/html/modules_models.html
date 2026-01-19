@@ -1,0 +1,300 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="russian">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Модели (src/models) &mdash; документация library 15.01.2026</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=3903d11c"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="prev" title="Welcome to library&#39;s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Модели (src/models)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#module-models">Пакет models</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#models.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.author"><code class="docutils literal notranslate"><span class="pre">Book.author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.year"><code class="docutils literal notranslate"><span class="pre">Book.year</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.isbn"><code class="docutils literal notranslate"><span class="pre">Book.isbn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.borrow"><code class="docutils literal notranslate"><span class="pre">Book.borrow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.get_info"><code class="docutils literal notranslate"><span class="pre">Book.get_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.Book.return_book"><code class="docutils literal notranslate"><span class="pre">Book.return_book()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#module-models.book">Модуль book.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#models.book.Book"><code class="docutils literal notranslate"><span class="pre">Book</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.title"><code class="docutils literal notranslate"><span class="pre">Book.title</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.author"><code class="docutils literal notranslate"><span class="pre">Book.author</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.year"><code class="docutils literal notranslate"><span class="pre">Book.year</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.isbn"><code class="docutils literal notranslate"><span class="pre">Book.isbn</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.borrow"><code class="docutils literal notranslate"><span class="pre">Book.borrow()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.get_info"><code class="docutils literal notranslate"><span class="pre">Book.get_info()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.Book.return_book"><code class="docutils literal notranslate"><span class="pre">Book.return_book()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#models.book.EBook"><code class="docutils literal notranslate"><span class="pre">EBook</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#models.book.EBook.get_info"><code class="docutils literal notranslate"><span class="pre">EBook.get_info()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Модели (src/models)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/modules_models.rst.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="src-models">
+<h1>Модели (src/models)<a class="headerlink" href="#src-models" title="Permalink to this heading"></a></h1>
+</section>
+<section id="module-models">
+<span id="models"></span><h1>Пакет models<a class="headerlink" href="#module-models" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.Book">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.</span></span><span class="sig-name descname"><span class="pre">Book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isbn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/book.html#Book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.Book" title="Ссылка на это определение"></a></dt>
+<dd><p>Класс отвечающий за книги в библиотеке
+Подробное описание класса, что он делает, за что отвечает, какие основные функции выполняет.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.Book.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#models.Book.title" title="Ссылка на это определение"></a></dt>
+<dd><p>Название книги.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.Book.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#models.Book.author" title="Ссылка на это определение"></a></dt>
+<dd><p>Автор книги.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.Book.year">
+<span class="sig-name descname"><span class="pre">year</span></span><a class="headerlink" href="#models.Book.year" title="Ссылка на это определение"></a></dt>
+<dd><p>Год публикации.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.Book.isbn">
+<span class="sig-name descname"><span class="pre">isbn</span></span><a class="headerlink" href="#models.Book.isbn" title="Ссылка на это определение"></a></dt>
+<dd><p>Уникальный код.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.Book.borrow">
+<span class="sig-name descname"><span class="pre">borrow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#Book.borrow"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.Book.borrow" title="Ссылка на это определение"></a></dt>
+<dd><p>Метод выдачи книги</p>
+<p>При вызове метода со свободной книгой меняет её статус на &quot;Занято&quot; и возвращает True,
+если книга уже была занята, то возвращает False.</p>
+<p>Пример:
+&gt;&gt;&gt; book = Book(&quot;Книга&quot;, &quot;Автор&quot;, &quot;123&quot;)
+&gt;&gt;&gt; book.borrow
+Книга выдана</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.Book.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#Book.get_info"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.Book.get_info" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.Book.return_book">
+<span class="sig-name descname"><span class="pre">return_book</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#Book.return_book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.Book.return_book" title="Ссылка на это определение"></a></dt>
+<dd><p>Возврат книги</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-models.book">
+<span id="book-py"></span><h1>Модуль book.py<a class="headerlink" href="#module-models.book" title="Permalink to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="models.book.Book">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.book.</span></span><span class="sig-name descname"><span class="pre">Book</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isbn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/book.html#Book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.book.Book" title="Ссылка на это определение"></a></dt>
+<dd><p>Класс отвечающий за книги в библиотеке
+Подробное описание класса, что он делает, за что отвечает, какие основные функции выполняет.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.book.Book.title">
+<span class="sig-name descname"><span class="pre">title</span></span><a class="headerlink" href="#models.book.Book.title" title="Ссылка на это определение"></a></dt>
+<dd><p>Название книги.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.book.Book.author">
+<span class="sig-name descname"><span class="pre">author</span></span><a class="headerlink" href="#models.book.Book.author" title="Ссылка на это определение"></a></dt>
+<dd><p>Автор книги.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.book.Book.year">
+<span class="sig-name descname"><span class="pre">year</span></span><a class="headerlink" href="#models.book.Book.year" title="Ссылка на это определение"></a></dt>
+<dd><p>Год публикации.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="models.book.Book.isbn">
+<span class="sig-name descname"><span class="pre">isbn</span></span><a class="headerlink" href="#models.book.Book.isbn" title="Ссылка на это определение"></a></dt>
+<dd><p>Уникальный код.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.book.Book.borrow">
+<span class="sig-name descname"><span class="pre">borrow</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#Book.borrow"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.book.Book.borrow" title="Ссылка на это определение"></a></dt>
+<dd><p>Метод выдачи книги</p>
+<p>При вызове метода со свободной книгой меняет её статус на &quot;Занято&quot; и возвращает True,
+если книга уже была занята, то возвращает False.</p>
+<p>Пример:
+&gt;&gt;&gt; book = Book(&quot;Книга&quot;, &quot;Автор&quot;, &quot;123&quot;)
+&gt;&gt;&gt; book.borrow
+Книга выдана</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.book.Book.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#Book.get_info"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.book.Book.get_info" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="models.book.Book.return_book">
+<span class="sig-name descname"><span class="pre">return_book</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#Book.return_book"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.book.Book.return_book" title="Ссылка на это определение"></a></dt>
+<dd><p>Возврат книги</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="models.book.EBook">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">models.book.</span></span><span class="sig-name descname"><span class="pre">EBook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isbn</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/models/book.html#EBook"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.book.EBook" title="Ссылка на это определение"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="models.book.EBook.get_info">
+<span class="sig-name descname"><span class="pre">get_info</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/models/book.html#EBook.get_info"><span class="viewcode-link"><span class="pre">[исходный</span> <span class="pre">код]</span></span></a><a class="headerlink" href="#models.book.EBook.get_info" title="Ссылка на это определение"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to library&#39;s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2026, Anna. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
